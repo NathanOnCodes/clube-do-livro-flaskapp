@@ -12,7 +12,7 @@ def create_app():
 
     api = Api(app, version='1.0', title='Book Ranking API', description='API para ranking de livros')
 
-    from .resources.book import api as book_ns
+    from .api.endpoints_book import api as book_ns
     api.add_namespace(book_ns, path='/books')
     return app
 
